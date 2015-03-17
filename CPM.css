@@ -1,0 +1,291 @@
+@charset "utf-8";
+/* CSS Document */
+#screen{
+	position:fixed;
+	top:0px;
+	left:0px;
+	background:#000;
+	z-index:900;
+	opacity:0.2;
+	width:100%;
+	height:100%;
+}
+#imgStyle{
+	width:30px;
+	height:35px;
+}
+#cpm{
+	z-index:901;
+	position:fixed;
+	left:50%;
+	top:50%;
+	max-width:980px;
+	font-size:14px;
+	font-family:'微软雅黑';
+	border:1px solid #000;
+}
+	#cpm .closecpm{
+		position:absolute;
+		right:-15px;
+		top:-15px;
+		height:30px;
+		width:30px;
+		background:url(images/xubox_ico0.png) -60px -195px no-repeat;
+	}
+	#cpm .notice{
+		border-radius:3px;
+		background:#3737FF;
+		border:#787878 5px solid;
+		min-height:100px;
+	}
+	#cpm .title{
+		text-align:center;
+		font-size:20px;
+		font-weight:900;
+		margin-top:5px;
+	}
+	#cpm p{
+		1text-indent: 2em;
+		margin:10px;
+	}
+	#cpm a.confirm{
+		background:url(images/xubox_ico0.png) -4px -115px no-repeat;
+		width:70px;
+		height:28px;
+		display:block;
+		text-align:center;
+		line-height:28px;
+		color:#fff;
+		font-weight:900;
+		font-size:12px;
+		text-decoration:none;
+		margin:4px 10px;
+	}
+	#cpm a.cancel{
+		background:url(images/xubox_ico0.png) -82px -114px no-repeat;
+		width:70px;
+		height:28px;
+		display:block;
+		text-align:center;
+		line-height:28px;
+		color:#fff;
+		font-weight:900;
+		font-size:12px;
+		text-decoration:none;
+		margin:4px 10px;
+	}
+	/* 弹窗头部 */
+		#cpm .cpmHead{
+			background:url(images/xubox_title0.png) repeat-x;
+			height:35px;
+			width:100%;
+			position:relative;
+		}
+			#cpm .cpmHead a.closecpm1{
+				background:url(images/xubox_ico0.png) -30px -5px no-repeat;
+				width:16px;
+				height:18px;
+				position:absolute;
+				right:5px;
+				top:5px;
+				
+			}
+			#cpm .cpmHead a.closeCPM:hover{
+				background:url(images/xubox_ico0.png) -50px -5px no-repeat;
+			}
+			#cpm .cpmHead .headtitle{
+				height:28px;
+				line-height:28px;
+				padding-left:5px;
+			}
+		#cpm .cpmbody{
+			background:url(images/textbg.png);
+			overflow:hidden;
+			max-width:300px;
+		}
+		#cpm .cpmbody a.cancel{
+			float:right;
+		}
+		#cpm .cpmbody a.confirm{
+			float:left;	
+		}
+		/*   相册弹窗   */
+		#cpm .albumImgShow{
+			width:660px;
+			height:660px;
+			float:left;
+			margin:10px;
+			border 1px solid #fff;
+			overflow:hidden;
+			position:relative;
+		}
+			#cpm .albumImgShow div.show{
+				position:relative;	
+			}
+			#cpm .albumImgShow div.center{
+				width:100%;
+				height:100%;
+				text-align:center;
+			}
+				#cpm .albumImgShow div.show img{
+					position:absolute;
+					1width:680px;
+					1height:200px;
+				}
+				/* 小图预览 */
+				#cpm .albumImgShow div.Sample{
+					position:absolute;
+					bottom:20px;
+					right:20px;
+					width:110px;
+					height:110px;
+					opacity:0.5;
+					background:#000;
+					overflow:hidden;
+					text-align:center;
+				}
+					#cpm .albumImgShow div.Sample img{
+						1max-width:110px;
+					}
+					#cpm .albumImgShow div.Sample div.Sampleimg{
+						position:relative;
+						display:inline-block;
+					}
+						#cpm .albumImgShow div.Sample div.Sampleimg div.SampleWindow{
+							border:2px solid #fff;
+							width:30px;
+							height:30px;
+							position:absolute;
+							top:0px;
+							left:0px;
+						}
+			/* 评论区 */
+			#cpm .albumComment{
+				width:300px;
+				height:99%;
+				background:#fff;
+				float:left;
+			}
+			#cpm .albumMiniImg{
+				
+			}
+	/*  小贴士  */
+	.tipsW{
+		line-height:20px;
+		padding:3px 10px;
+		color:#fff;
+		border-radius:3px;
+		box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
+		background:red;
+		font-size: 12px;
+		position:absolute;
+		margin:10px;
+		max-width:200px;
+	}
+		.tipsW i{
+			display:block;
+			position:absolute;
+		}
+		.tipsW i.tipsT{
+			border-width:10px;
+    		border-style:dashed solid dashed dashed;
+    		border-color:transparent red transparent transparent;
+			top:-10px;
+			left:-5px;
+		}
+		.tipsW i.tipsB{
+			border-width:10px;
+    		border-style:dashed solid dashed dashed;
+    		border-color:transparent red transparent transparent;
+			left:-5px;
+			bottom:-10px;
+		}
+		.tipsW i.tipsR{
+			border-width:10px;
+    		border-style:dashed dashed solid dashed;
+    		border-color:transparent transparent red transparent;
+			right:-10px;
+			top:-5px;
+		}
+		.tipsW i.tipsL{
+			border-width:10px;
+    		border-style:dashed dashed solid dashed;
+    		border-color:transparent transparent red transparent;
+			top:-5px;
+			left:-10px;
+		}
+/*------悬浮菜单导航-------*/
+#cpmfixnav{
+	position:fixed;
+	height:50px;
+	width:50px;
+	z-index:600;
+}
+	#cpmfixnav a{
+		height:100%;
+		width:100%;
+		display:block;
+		position:absolute;
+		right:0px;
+		top:0px;
+		z-index:590;
+		background:url(images/cpmFixNav.png) no-repeat;
+		border-radius:25px;
+		box-shadow:0.5px 0px 2px #999999;
+	}
+	#cpmfixnav a:hover{
+		color:#000;
+	}
+	#cpmfixnav a.cpmNavInfor{
+		background-position:0px 0px;	
+	}
+	#cpmfixnav a.cpmNavMusic{
+		background-position:-50px 0px;
+	}
+	#cpmfixnav a.cpmNavPen{
+		background-position:-100px 0px;
+	}
+	#cpmfixnav a.cpmNavFile{
+		background-position:-150px 0px;
+	}
+/* 悬浮菜单中心圆形 */
+.cpmTarget{
+	width:200px;
+	height:200px;
+	position:fixed;
+	top:50%;
+	left:50%;
+	border-radius:100px;
+	margin-left:-100px;
+	margin-top:-100px;
+	border:1px solid #000;
+	z-index:560;
+}
+/*--------相册幻灯片album--------*/
+.cpmAlbum{
+	1border:3px solid #000;
+	overflow:hidden;
+}
+.cpmAlbum ul li{
+	margin-top:100px;
+	list-style:none;
+	float:left;
+	width:200px;
+	height:112px;
+	overflow:hidden;
+	margin:5px;
+}
+	.cpmAlbum ul li img{
+		border:0px;
+	}
+.albumMiniImg{
+	float:left;
+}
+	.albumMiniImg ul li{
+		width:50px;
+		height:50px;
+	}
+		.albumMiniImg ul li img{
+			width:100%;
+			height:100%;
+		}
